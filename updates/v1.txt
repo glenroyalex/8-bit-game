@@ -1,0 +1,3 @@
+Version 1.0 — First build!
+- Player can move
+- Pixel art added
