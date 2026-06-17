@@ -14,9 +14,9 @@ scene("main", () => {
 ]);
 
   onKeyDown("left", () => player.move(-120, 0));
-  onKeyDown("right", () => player.move(120, 0));
-  onKeyDown("up", () => player.move(0, -120));
-  onKeyDown("down", () => player.move(0, 120));
+onKeyDown("right", () => player.move(120, 0));
+onKeyDown("up", () => player.move(0, -120));
+onKeyDown("down", () => player.move(0, 120));
 });
 
 go("main");
