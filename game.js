@@ -3,14 +3,19 @@ kaboom({
   scale: 2,
 });
 
-loadSprite("eyes", "assets/eyes.png");
+loadSprite("player", "assets/player.png", {
+  sliceX: 4,
+  anims: {
+    idle: { from: 0, to: 1, speed: 4, loop: true },
+    walk: { from: 2, to: 3, speed: 8, loop: true },
+  }
+});
 
-scene("main", () => {
-  const player = add([
-  sprite("eyes"),
+const player = add([
+  sprite("player"),
   pos(80, 80),
   area(),
-  scale(4), // makes the tiny sprite visible
+  scale(2),
 ]);
 
   onKeyDown("left", () => player.move(-120, 0));
