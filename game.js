@@ -3,7 +3,7 @@ kaboom({
   scale: 2,
 });
 
-loadSprite("player", "assets/player.png");
+loadSprite("eyes", "assets/eyes.png");
 
 scene("main", () => {
   const player = add([
