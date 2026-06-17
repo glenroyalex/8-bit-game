@@ -7,10 +7,11 @@ loadSprite("eyes", "assets/eyes.png");
 
 scene("main", () => {
   const player = add([
-    sprite("player"),
-    pos(80, 80),
-    area(),
-  ]);
+  sprite("eyes"),
+  pos(80, 80),
+  area(),
+  scale(4), // makes the tiny sprite visible
+]);
 
   onKeyDown("left", () => player.move(-120, 0));
   onKeyDown("right", () => player.move(120, 0));
