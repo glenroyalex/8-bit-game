@@ -3,11 +3,11 @@ kaboom({
   scale: 2,
 });
 
-loadSprite("player", "assets/player.png", {
-  sliceX: 4,
+loadSprite("player", "assets/player_walk.png", {
+  sliceX: 4,   // number of frames in the row
   anims: {
-    idle: { from: 0, to: 1, speed: 4, loop: true },
-    walk: { from: 2, to: 3, speed: 8, loop: true },
+    walk: { from: 0, to: 3, speed: 8, loop: true },
+    idle: { from: 0, to: 0, speed: 1, loop: true }
   }
 });
 
@@ -18,10 +18,20 @@ const player = add([
   scale(2),
 ]);
 
-  onKeyDown("left", () => player.move(-120, 0));
-onKeyDown("right", () => player.move(120, 0));
-onKeyDown("up", () => player.move(0, -120));
-onKeyDown("down", () => player.move(0, 120));
+onKeyDown("left", () => {
+  player.move(-120, 0);
+  player.flipX(true);
+  player.play("walk");
+});
+
+onKeyDown("right", () => {
+  player.move(120, 0);
+  player.flipX(false);
+  player.play("walk");
+});
+
+onKeyRelease(() => {
+  player.play("idle");
 });
 
 go("main");
