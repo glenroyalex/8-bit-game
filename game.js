@@ -4,9 +4,9 @@ kaboom({
 });
 
 loadSprite("player", "assets/player_walk.png", {
-  sliceX: 4,   // number of frames in the row
+  sliceX: 10,
   anims: {
-    walk: { from: 0, to: 3, speed: 8, loop: true },
+    walk: { from: 0, to: 1, speed: 8, loop: true },
     idle: { from: 0, to: 0, speed: 1, loop: true }
   }
 });
