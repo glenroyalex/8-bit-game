@@ -1,5 +1,5 @@
 kaboom({
-  background: [155, 188, 15],
+  background: [0, 255, 0],   // bright green
   scale: 2,
 });
 
